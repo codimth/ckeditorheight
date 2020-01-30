@@ -1,0 +1,7 @@
+name: "CKEditor Height"
+type: module
+description: "Adjusts CKEditor height to field row setting."
+core: 8.x
+package: Custom
+dependencies:
+  - drupal:ckeditor

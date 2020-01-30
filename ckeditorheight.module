@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @param $libraries
+ * @param $extension
+ */
+function ckeditorheight_library_info_alter(&$libraries, $extension) {
+  if ($extension === 'ckeditor' && isset($libraries['drupal.ckeditor'])) {
+    $module_path = drupal_get_path('module', 'ckeditorheight');
+    assert((bool) $module_path);
+    $js_path = "/$module_path/ckeditorheight.js";
+    $libraries['drupal.ckeditor']['js'][$js_path] = [];
+  }
+}
+
+
